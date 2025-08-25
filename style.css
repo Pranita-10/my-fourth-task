@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* body section here's */
+body {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin: 0; /* none margin */
+    padding: 0; /* none padding */
+    color: #333; /* black color for body headline*/
+    line-height: 1.6; /* 1.6 line-height you can change it */
+}
+
+a {
+    text-decoration: none; /* text-decoration is none */
+    color: inherit; /* inherit color*/
+}
+
+/* Header and Navigation section css */
+.header {
+    background:linear-gradient(pink,rgba(0, 255, 255, 0.308)); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* black - box shadow */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex; /* flex display using */
+    justify-content: space-between; /* space between */
+    align-items: center; /* Items in the center */
+    padding: 1rem 2rem; /* padding is 1rem and 2rem  */
+}
+
+.navbar h2{
+    color: rgb(52, 46, 46); /* here is the your heading name color is  */
+}
+
+.menu-list {
+    list-style: none; /* None list-style */
+    display: flex; /* display will be flex*/
+    gap: 2rem;
+    margin: 0; /* None margin */
+    padding: 0; /* None padding */
+}
+
+.links {
+    font-weight: 600; /* links font weight is 600 */
+    transition: color 0.3s; /* trasnition is 0.3 smoothly */
+}
+
+.links:hover, .links.active {
+    color: #3d7be5; 
+}
+
+
+/* Hero Section  - This is about page css*/
+.hero-section {
+    display: flex; /*flex display*/
+    justify-content: center; /*content at the center*/
+    align-items: center; /*text align is center change it want to left or right*/
+    min-height: calc(100vh - 80px);
+    padding: 2rem;
+    background-color: #f3eeee;
+}
+
+.hero-content {
+    flex: 1; /* flex is 1 increase it*/
+    display: flex; /*display is flex*/
+    gap: 2rem; /*gap is 2rem*/
+}
+
+.intro-text {
+    flex: 1; /*flex is 1 change it*/
+}
+
+
+.job-title {
+    font-size: 1.5rem;
+    font-weight: 400; /*font weight is 400*/
+    color: #555; /*job title black-color*/
+    margin-bottom: 0.5rem;
+}
+
+.my-name {
+    font-size: 2rem; /*2rem font size increase it*/
+    font-weight: 400; /* adjust font weight*/
+    color: #222; /*color is black*/
+    margin: 0; /*None margin*/
+}
+
+.description {
+    max-width: 500px; /*adjust the width of description*/
+    margin-top: 1rem; /*margin at the top is 1rem*/
+    color: #666; /*adjust the color - black*/
+}
+
+.hero-image {
+    flex: 1; /*flex is 1 change it*/
+    text-align: center; /*text-align center*/
+}
+
+.hero-image img {
+    max-width: 40%; /*adjust the max-width*/
+    height: auto; /*auto height*/
+}
+
+/* About Section CSS */
+.about-section {
+    padding: 4rem 2rem; /*a add padding */
+    background-color: #f3eeee; /* A light gray or off-white background color */
+}
+
+.about-container {
+    max-width: 1200px; /* Limits the maximum width of the container */
+    margin: 0 auto; /* Centers the container horizontally */
+    display: flex;  /* Enables a flexible box layout */
+    align-items: center; /* Aligns items vertically in the center */
+    gap: 4rem; /* Adds space between flex items */
+}
+ 
+.about-content {
+    flex: 1;
+}
+
+.section-title {
+    font-size: 2.1rem; /* Sets the font size */
+    font-weight: 700; /* Makes the font bold */
+    color: #222; /* Sets the text color to a dark gray */
+    text-align: center; /* Centers the text horizontally */
+    margin-bottom: 3rem; /* Adds space below the title */
+}
+
+.about-content p {
+    color: #666; /* Sets a dark gray color for the text */
+    margin-bottom: 1rem; /* Adds space below each paragraph */
+}
+
+/* Removes the bottom margin from the last paragraph to avoid extra space */
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+.download-cv-btn {
+    display: inline-block; /* Makes the link behave like a block element, allowing padding and margin */
+    background-color: #333; /* Sets a dark background color */
+    color: #fff; /* Sets the text color to white */
+    padding: 1rem 2rem; /* Adds padding inside the button */
+    border-radius: 5px; /* Rounds the corners of the button */
+    margin-top: 1.5rem; /* Adds space above the button */
+    font-weight: 500; /* Sets the font weight */
+    transition: background-color 0.3s; /* Smooth transition for background color changes */
+}
+
+/* Hover effect for the CV download button */
+.download-cv-btn:hover {
+    background: linear-gradient(pink, rgba(0, 255, 255, 0.308)); /* Changes background to a gradient on hover */
+    color: black; /* Changes text color to black on hover */
+}
+
+/* Styles for the hire button, which is similar to the CV button */
+.hire-btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    margin-top: 1.5rem;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for the hire button */
+.hire-btn:hover {
+    background: linear-gradient(pink, rgba(0, 255, 255, 0.308));
+    color: black;
+}
+
+/*Here's the education page section */
+.education-section {
+    padding: 4rem 2rem; /* Adds padding around the section */
+    text-align: center; /* Centers the content within the section */
+    background-color: #f3eeee; /* Sets a light gray background */
+}
+
+/* Container for the education cards, using a grid layout */
+.education-container {
+    display: grid; /* Enables CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Creates a responsive grid of columns */
+    gap: 2rem; /* Adds space between grid items */
+    max-width: 1200px; /* Limits the container's width */
+    margin: 0 auto; /* Centers the container horizontally */
+}
+
+/* Styles for individual education cards */
+.education-card {
+    background-color: #f8f4f4; /* Sets a slightly different light background */
+    padding: 2rem; /* Adds padding inside the card */
+    border-radius: 10px; /* Rounds the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Adds a smooth transition for hover effects */
+    text-align: center;
+}
+
+/* Styles for headings within the education card */
+.education-card h3 {
+    margin-top: 0; /* Removes the top margin */
+    color: black;
+    font-size: 1.25rem;
+}
+
+/* Styles for paragraphs within the education card */
+.education-card p {
+    color: #666;
+    line-height: 1.6; /* Improves readability by adding space between lines */
+}
+
+
+
+/*Here's the project section code */
+.projects-section, .contact-section {
+    padding: 4rem 2rem;
+    background-color: #f3eeee;
+}
+
+/* Container for project cards, using a responsive grid layout */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Styles for individual project cards */
+.project-card {
+    background-color: #f8f4f4;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+}
+
+/* Hover effect for project cards */
+.project-card:hover {
+    transform: translateY(-10px); /* Moves the card up by 10px on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increases the shadow on hover */
+}
+
+/* Styles for headings in project cards */
+.project-card h3 {
+    margin-top: 0;
+    color: rgb(106, 106, 181); /* A specific blueish color */
+    font-size: 1.25rem;
+}
+
+/* Styles for paragraphs in project cards */
+.project-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Styles for the project link */
+.project-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: black;
+    font-weight: 600;
+}
+
+/* -------------------- Contact Section Styles -------------------- */
+.contact-container {
+    display: flex; /* Creates a flexible layout */
+    justify-content: center; /* Centers items horizontally */
+    gap: 4rem;
+    flex-wrap: wrap; /* Allows items to wrap to a new line on smaller screens */
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Styles for the contact info card */
+.contact-info {
+    background-color: #f8f4f4;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Allows the element to grow */
+    min-width: 300px; /* Minimum width for the card */
+    text-align: center;
+}
+
+/* Styles for paragraphs within the contact info */
+.contact-info p {
+    margin: 1rem 0;
+    display: flex; /* Uses flexbox for alignment */
+    align-items: center; /* Vertically centers the text and icon */
+    gap: 10px; /* Adds space between the icon and text */
+    color: #666;
+}
+
+/* Styles for the icons in the contact info */
+.contact-info i {
+    color: rgb(77, 77, 227); /* A specific blue color for icons */
+}
+
+/*Here's the Footer section*/
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+/* Container for social media icons in the footer */
+.footer-socials {
+    margin-bottom: 15px;
+}
+
+/* Styles for social media links */
+.footer-socials a {
+    color: #fff;
+    font-size: 1rem; /* Adjust icon size */
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for social media icons */
+.footer-socials a:hover {
+    color: #0077b5;
+}
+
+/* Specific hover color for the GitHub icon */
+.footer-socials a:hover .fa-github {
+    color: #6e5494;
+}
+
+/* Specific hover color for the LinkedIn icon */
+.footer-socials a:hover .fa-linkedin {
+    color: #0077b5;
+}
+
+
+/* Styles for screens smaller than 992px */
+@media (max-width: 992px) {
+    .about-container {
+        flex-direction: column; /* Stacks items vertically */
+        text-align: center;
+    }
+    .about-image {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Styles for screens smaller than 768px (common mobile breakpoint) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap; /* Allows navigation items to wrap */
+    }
+    .menu-list {
+        display: none; /* Hides the menu by default */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+    }
+    .menu-list.active {
+        display: flex; /* Shows the menu when it has the 'active' class */
+    }
+    .hamburger {
+        display: block; /* Shows the hamburger icon for the mobile menu */
+    }
+    .hire-btn {
+        margin-top: 1rem;
+    }
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .social-icons {
+        flex-direction: row;
+        gap: 2rem;
+    }
+    .intro-text {
+        text-align: center;
+    }
+    .hero-image {
+        margin-top: 2rem;
+    }
+    .projects-container, .contact-container {
+        flex-direction: column;
+    }
+    .project-card, .contact-form, .contact-info {
+        min-width: unset; /* Removes the minimum width to allow full-width on mobile */
+    }
+}
