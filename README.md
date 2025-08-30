@@ -20,5 +20,5 @@ Objective: Create interactive interfaces that allow users to filter and sort dat
 2) CSS
 3) Javascript
 
-## Some Screenshot
+## ScreenShot About Project
 <img width="1904" height="870" alt="Screenshot 2025-08-30 120556" src="https://github.com/user-attachments/assets/01d0a56a-7005-4fb2-a572-ede83644697f" />
