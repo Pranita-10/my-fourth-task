@@ -22,3 +22,9 @@ Objective: Create interactive interfaces that allow users to filter and sort dat
 
 ## ScreenShot About Project
 <img width="1904" height="870" alt="Screenshot 2025-08-30 120556" src="https://github.com/user-attachments/assets/01d0a56a-7005-4fb2-a572-ede83644697f" />
+
+<img width="1876" height="886" alt="Screenshot 2025-08-30 120428" src="https://github.com/user-attachments/assets/2fcb5f71-3330-42d4-9b97-e9b2ca4a383d" />
+
+<img width="1888" height="893" alt="Screenshot 2025-08-30 120057" src="https://github.com/user-attachments/assets/c2cd7466-8e4d-4371-b65d-1c77b4f75cdc" />
+
+
