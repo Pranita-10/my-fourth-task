@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // -------------------- Smooth Scrolling for Navigation --------------------
-    // Select all links in the navigation menu that point to a section on the same page
     const navLinks = document.querySelectorAll('.menu-list a[href^="#"]');
     
     // Add a click event listener to each link

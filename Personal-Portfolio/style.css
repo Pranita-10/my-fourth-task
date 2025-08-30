@@ -174,45 +174,49 @@ a {
     color: black;
 }
 
+
 /*Here's the education page section */
-.education-section {
-    padding: 4rem 2rem; /* Adds padding around the section */
-    text-align: center; /* Centers the content within the section */
-    background-color: #f3eeee; /* Sets a light gray background */
+.skills-section {
+    padding: 4rem 2rem; /* add padding */
+    background-color: #f3eeee; /* A light gray or off-white background color */
 }
 
-/* Container for the education cards, using a grid layout */
-.education-container {
-    display: grid; /* Enables CSS Grid */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Creates a responsive grid of columns */
-    gap: 2rem; /* Adds space between grid items */
-    max-width: 1200px; /* Limits the container's width */
-    margin: 0 auto; /* Centers the container horizontally */
-}
-
-/* Styles for individual education cards */
-.education-card {
-    background-color: #f8f4f4; /* Sets a slightly different light background */
-    padding: 2rem; /* Adds padding inside the card */
-    border-radius: 10px; /* Rounds the corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-    transition: transform 0.3s, box-shadow 0.3s; /* Adds a smooth transition for hover effects */
+.skills-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
     text-align: center;
 }
 
-/* Styles for headings within the education card */
-.education-card h3 {
-    margin-top: 0; /* Removes the top margin */
-    color: black;
-    font-size: 1.25rem;
+.skills-container h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    color: #333;
 }
 
-/* Styles for paragraphs within the education card */
-.education-card p {
-    color: #666;
-    line-height: 1.6; /* Improves readability by adding space between lines */
+.skills-container ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
 }
 
+.skills-container li {
+    background-color: #685f5f;
+    color: #fff;    
+    padding: 0.75rem 1.5rem;
+    border-radius: 20px; /*change the border radius */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease; /*Easy transition color*/
+    font-weight: 500; /* adjust the font weight*/
+}
+
+.skills-container li:hover {
+    transform: translateY(-5px);
+}
 
 
 /*Here's the project section code */
@@ -249,7 +253,7 @@ a {
 /* Styles for headings in project cards */
 .project-card h3 {
     margin-top: 0;
-    color: rgb(106, 106, 181); /* A specific blueish color */
+    color: black; /* A specific black color */
     font-size: 1.25rem;
 }
 

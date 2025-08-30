@@ -1,0 +1,359 @@
+/* General Body and Layout */
+body {
+    /* Sets the font family for the entire body */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* Removes default margin and padding */
+    margin: 0;
+    padding: 0;
+    /* Creates a subtle linear gradient background */
+    background:linear-gradient(rgb(244, 241, 242),rgb(243, 185, 193));
+    /* Sets a dark gray color for the text */
+    color: #333;
+}
+
+/* Header and Navigation */
+.header {
+    /* Uses flexbox for alignment of logo and navigation */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Adds padding to the header */
+    padding: 20px 50px;
+    /* Sets a light background color */
+    background-color:rgb(248, 242, 242) ;
+    /* Adds a subtle shadow for depth */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.header .logo {
+    /* Styles the logo text */
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+.nav-menu ul {
+    /* Removes bullet points and default padding from the list */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /* Arranges menu items horizontally */
+    display: flex;
+    /* Adds space between list items */
+    gap: 20px;
+}
+.nav-menu a {
+    /* Removes underlines from links */
+    text-decoration: none;
+    color: black;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero-section {
+    /* Aligns content vertically and horizontally in the center */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* Centers the text */
+    text-align: center;
+    color: black;
+    /* Adds padding */
+    padding: 10px 20px;
+}
+.hero-section h1 {
+    /* Styles the main heading */
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+.hero-section p {
+    /* Styles the paragraph text */
+    font-size: 1em;
+    max-width: 600px;
+}
+.cta-button {
+    /* Styles the call-to-action button */
+    background-color: rgb(19, 209, 28);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: lighter;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* Common Content Styling */
+.main-content {
+    /* Adds padding to the main content area */
+    padding: 20px 50px;
+}
+.page-content {
+    /* Hides content sections by default */
+    display: none;
+}
+.page-content.active {
+    /* Shows the active content section */
+    display: block;
+}
+.page-title {
+    /* Centers and styles the page titles */
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+    color: black;
+}
+
+/* About Page */
+.about-content {
+    /* Centers the about content and limits its width */
+    max-width: 800px;
+    margin: 0 auto;
+    /* Justifies the text and sets line height */
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* Products Page */
+.products-container {
+    /* Arranges the filters and product grid side-by-side */
+    display: flex;
+    gap: 20px;
+}
+.filters-sort-bar {
+    /* Styles the filter and sort sidebar */
+    width: 250px;
+    background-color: #f3eeee;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(41, 94, 125, 0.913);
+    height: fit-content;
+}
+
+.filter-section, .sort-section {
+    /* Adds spacing between filter and sort sections */
+    margin-bottom: 20px;
+}
+.filter-section h4, .sort-section h4 {
+    /* Styles headings within filter and sort sections */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.filter-section button {
+    /* Styles filter buttons */
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.filter-section button.active {
+    /* Styles the active filter button */
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+.price-filter label {
+    /* Styles price filter labels */
+    display: block;
+    margin-bottom: 5px;
+}
+.price-filter input[type="range"] {
+    /* Makes the price range slider full width */
+    width: 100%;
+}
+.sort-section select {
+    /* Styles the sort dropdown menu */
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+}
+.search-bar input {
+    /* Styles the search input field */
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.product-grid {
+    /* Creates a responsive grid layout for products */
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+.product-card {
+    /* Styles individual product cards */
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    /* Adds a subtle hover effect */
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+.product-card:hover {
+    /* Lifts the card on hover */
+    transform: translateY(-5px);
+}
+.product-card img {
+    /* Styles product images within the card */
+    max-width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.product-card h3 {
+    /* Styles the product name */
+    font-size: 1.2em;
+    margin: 10px 0 5px;
+}
+.product-card .price {
+    /* Styles the product price */
+    font-size: 1.1em;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.product-card .rating {
+    /* Styles the product rating */
+    color: #f7a00f;
+    margin-bottom: 10px;
+}
+.product-card .description {
+    /* Styles the product description and truncates it to two lines */
+    font-size: 0.9em;
+    color: #666;
+    flex-grow: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.add-to-cart-btn {
+    /* Styles the add-to-cart button */
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(251, 142, 160);
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.add-to-cart-btn:hover {
+    /* Adds a gradient hover effect to the button */
+    background:linear-gradient(pink, rgb(60, 121, 206));
+}
+
+/* Cart & Contact Page - CSS */
+.cart-container {
+    /* Centers and styles the cart container */
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #e6dcdc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+} 
+.cart-item {
+    /* Styles individual items in the cart */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+.cart-item img {
+    /* Styles the cart item image */
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.cart-total {
+    /* Styles the total price in the cart */
+    text-align: right;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.contact-form-container {
+    /* Centers and styles the contact form container */
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f1ecec;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.contact-form-container label, .contact-form-container input, .contact-form-container textarea {
+    /* Makes form elements full width and adds spacing */
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.contact-form-container input, .contact-form-container textarea {
+    /* Styles input and textarea fields */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.contact-form-container button {
+    /* Styles the contact form submit button */
+    padding: 12px 20px;
+    background-color: rgb(16, 174, 16);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    /* Styles the footer section */
+    text-align: center;
+    padding: 20px;
+    background-color: #585858;
+    color: white;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Adjusts header layout for smaller screens */
+    .header {
+        flex-direction: column;
+        padding: 15px;
+    }
+    .nav-menu ul {
+        /* Wraps and centers the navigation menu */
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .main-content {
+        /* Reduces padding on smaller screens */
+        padding: 10px;
+    }
+    .products-container {
+        /* Stacks filter bar and product grid vertically */
+        flex-direction: column;
+    }
+    .filters-sort-bar {
+        /* Makes the filter bar full width */
+        width: 100%;
+    }
+}

@@ -1,0 +1,118 @@
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:rgb(120, 151, 176);
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f1eaea;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-weight:lighter;
+    font-size: 1.2em;
+}
+
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2{
+    text-align: center; /*text-align is center your can change it*/
+    font-size: 1rem;
+}
+
+.add-note-section {
+    background-color: #f1eaea;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+#add-note-btn {
+    padding: 10px 15px;
+    background-color: #0b6bd2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#add-note-btn:hover{
+    background-color: #065ebc;
+}
+
+.notes-heading {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#notes-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.note {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.note h3 {
+    margin-top: 0;
+}
+
+.note p {
+    flex-grow: 1; /* Allows text to grow and fill space */
+}
+
+.note-actions {
+    margin-top: 10px;
+}
+
+.note-actions button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background-color: #db4242;
+    color: black;
+}
+
+.read-more-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #notes-list {
+        grid-template-columns: 1fr;
+    }
+}
